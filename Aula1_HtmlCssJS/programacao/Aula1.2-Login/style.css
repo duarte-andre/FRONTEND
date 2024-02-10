@@ -1,0 +1,134 @@
+/* importando uma fonte externa para não usar a padrão
+do navegador... */
+@font-face{
+    font-family: "Syne";
+    src: url("./files/fonts/SyneMono-Regular.ttf");
+    font-weight: normal;
+}
+
+/* RESETANDO OS ESTILOS PADRÃO DO NAVEGADOR */
+* {
+    margin: 0; /* margem externa zero */
+    padding: 0; /* margem interna */
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    font-family: "Syne";
+}
+html, body{
+    height: 100%;
+}
+
+/* INICIANDO OS ESTILOS DA APLICAÇÃO */
+
+.login{
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: row;
+}
+
+.login_panel{
+    height: 100vh;
+    width: 50vw;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.logo_panel{
+    height: 100vh;
+    width: 50vw;    
+    background-color: #231f20;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.logo_content{
+    /*parte da posição atual*/
+    position: relative;
+    /*subindo 50 pixels*/
+    bottom: 50px;
+    color: white;
+}
+
+/******** LOGIN PANEL STYLE ******/
+
+.login_content{
+    /* background-color: green; */
+    width: 100%;
+    max-width: 400px;   
+    padding: 20px; /*é uma margem interna*/
+}
+
+
+.login_title{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+}
+
+.form_content{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+}
+
+.login_input{
+    height: 35px;
+    border-radius: 4px;
+    border: 1px solid rgba(94,110,110,0.424);
+}
+
+/* configura estilo quando campo está em foco (clicado)*/
+.login_input:focus{
+    outline: 0;
+    background: linear-gradient(
+        135deg,
+        rgba(16,221,211,0.1),
+        rgba(2,165,230,0.3)
+    );
+}
+
+#login_button {
+    width: 100%;
+    height: 35px;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    background: linear-gradient(
+        135deg,
+        rgba(16,221,211,0.849),
+        rgba(2,165,230,0.87)
+    );
+}
+/* evento quando o mouse passa sobre o componente,
+neste caso estamos aumentado o tamanho do botão em 5% em 1/2 seg */
+#login_button:hover{
+    transform: scale(1.05);
+    transition: 0.5s;
+}
+
+
+/***  ANIMATION  ***/
+@keyframes up{
+    from{
+        opacity: 0;
+        transform: translateY(-40px);
+    }
+    to{
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+.animation-up{
+    animation-name: up;
+    animation-duration: 1200ms;
+    animation-fill-mode: backwards;
+}

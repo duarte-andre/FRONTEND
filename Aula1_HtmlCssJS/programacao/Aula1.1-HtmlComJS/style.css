@@ -1,0 +1,21 @@
+header > h1{
+    color: blue;
+}
+body > header > h1{
+    color: pink !important;
+}
+/* selecionar pela tag */
+h1 {
+    color: red;
+    font-size: 60px;
+}
+
+/* selecionar por id (use #)*/
+#myImage{
+    width: 300px;
+    height: 300px;
+}
+/* selecionar por classe (use .)*/
+.customArticle{
+    background-color: grey;
+}
